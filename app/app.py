@@ -65,7 +65,7 @@ def exito(documento, numeros):
                 cursor.execute('call sp_insertar_compra(%s, %s, %s, %s)', (payment_id, numeros, payment_type, documento))
                 conexionsor.connection.commit()
                 cursor.close()
-                flash('¡Su registro fué exitoso!, te llegara un email con la informacón de tú compra.')                
+                flash('¡Su registro fué exitoso!, te enviamos un email con la informacón de tú compra.')                
         except Exception as e:
                 flash('No se pudo realizar el registro')
         try:
